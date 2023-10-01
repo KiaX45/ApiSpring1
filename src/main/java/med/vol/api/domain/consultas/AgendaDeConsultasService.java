@@ -36,7 +36,7 @@ public class AgendaDeConsultasService {
         Consulta consulta = new Consulta(null, medico, paciente, datosAgendarConsulta.fecha());
             consultaRepository.save(consulta);
     }
-
+    //Repaso de cambio
     private Medico seleccionarMedico(DatosAgendarConsulta datosAgendarConsulta) {
         if(datosAgendarConsulta.idMedico() != null){
             return medicoRepository.getReferenceById(datosAgendarConsulta.idMedico());

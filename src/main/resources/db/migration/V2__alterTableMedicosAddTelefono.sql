@@ -1,0 +1,1 @@
+alter table medicos add telefono varchar(20) not null DEFAULT '777777777';

@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS consultas(
+id SERIAL PRIMARY KEY,
+id_medico INTEGER NOT NUll REFERENCES medicos(id_medico),
+id_paciente INTEGER NOT NULL REFERENCES pacientes(id_paciente),
+fecha TIMESTAMP WITHOUT TIME ZONE NOT NULL
+)

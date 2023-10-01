@@ -38,7 +38,8 @@ public class AgendaDeConsultasService {
     }
     //Repaso de cambio
     private Medico seleccionarMedico(DatosAgendarConsulta datosAgendarConsulta) {
-        if(datosAgendarConsulta.idMedico() != null){
+
+         if(datosAgendarConsulta.idMedico() != null){
             return medicoRepository.getReferenceById(datosAgendarConsulta.idMedico());
         }
         if(datosAgendarConsulta.especialidad() == null){
@@ -51,5 +52,6 @@ public class AgendaDeConsultasService {
             throw new ValidacionDeIntegridad("No hay medicos disponibles");
         }
         return medicos.get(0);
+
     }
 }
